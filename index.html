@@ -80,7 +80,6 @@ button,input,select,textarea{font-family:inherit}
 </style>
 </head>
 <body>
-
 <svg style="position:absolute;width:0;height:0" aria-hidden="true">
 <defs>
 <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3b0"/><stop offset=".35" stop-color="#f5b81c"/><stop offset=".7" stop-color="#c98a0a"/><stop offset="1" stop-color="#ffd966"/></linearGradient>
@@ -98,11 +97,9 @@ button,input,select,textarea{font-family:inherit}
 </symbol>
 </defs>
 </svg>
-
 <div id="app">
   <video id="v" autoplay playsinline preload="auto"></video>
   <div id="spin"></div>
-
   <div id="splash">
     <svg id="lg"><use href="#logo" xlink:href="#logo" width="100%" height="100%"/></svg>
     <h1 class="t1 gold">HECHONA TV</h1>
@@ -110,16 +107,13 @@ button,input,select,textarea{font-family:inherit}
     <div class="pb"><div class="bar"></div></div>
     <p class="hint">Toca la pantalla o pulsa OK para ver los canales</p>
   </div>
-
   <div id="toast"></div>
   <div id="err"></div>
-
   <div id="top">
     <button id="pv" class="btn bt" aria-label="Canal anterior">◀</button>
     <button id="nx" class="btn bt" aria-label="Canal siguiente">▶</button>
     <button id="bf" class="btn bt" aria-label="Pantalla completa">⛶</button>
   </div>
-
   <aside id="drawer">
     <div class="hd">
       <div class="lgb"><svg><use href="#logo" xlink:href="#logo" width="100%" height="100%"/></svg></div>
@@ -128,16 +122,13 @@ button,input,select,textarea{font-family:inherit}
     </div>
     <div class="pad"><input id="q" class="in" type="search" placeholder="Buscar canal…" autocomplete="off"></div>
     <div id="tabs"></div>
-
     <div id="p-pais" class="hide"><select id="sel" class="in"></select></div>
-
     <div id="p-auto" class="hide">
       <label class="ab"><input type="checkbox" id="chk"><span id="abt"></span></label>
       <p class="sm">☑ Marcado = EJECUTAR al inicio · ☐ En blanco = NO ejecutar.</p>
       <p class="sm">Marcado: HECHONA TV abre directo en el último canal visto, sin pantalla de espera.</p>
       <p class="sm">Una página web no puede encender sola la TV. Para que arranque al prenderla: guarda esta dirección como PÁGINA DE INICIO del navegador del Hisense, o elige el navegador en la opción "App al encender" si tu modelo la tiene.</p>
     </div>
-
     <div id="p-add" class="hide">
       <input id="url" class="in mb" type="url" placeholder="URL de lista (M3U, M3U8, TXT, Astra…)">
       <div class="rowf">
@@ -150,7 +141,6 @@ button,input,select,textarea{font-family:inherit}
       <div id="cnt" class="sm"></div>
       <div id="lists"></div>
     </div>
-
     <div id="stat"></div>
     <div id="list"></div>
   </aside>
@@ -590,7 +580,6 @@ ShowtimeTV ✪ | CL|https://stmv7.voxtvhd.com.br/showtimetv/showtimetv/playlist.
 window.onerror=function(m,s,l){var e=document.getElementById('err');if(e){e.style.display='block';e.textContent='Error: '+m+' (línea '+l+')'}};
 var $=function(i){return document.getElementById(i)};
 var LS={g:function(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},s:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}},r:function(k){try{localStorage.removeItem(k)}catch(e){}}};
-
 var MAXL=8;
 var U={sereno:'https://gia.tv/streams/208643.m3u',tal:'https://gia.tv/streams/208260.m3u',retro:'https://canalcine35mm.wixsite.com/live',
 cl1:'https://m3u.cl/lista/CL.m3u',cl2:'https://www.m3u.cl/lista/CL.m3u',cl3:'http://m3u.cl/lista/CL.m3u',cl4:'https://iptv-org.github.io/iptv/countries/cl.m3u'};
@@ -613,7 +602,6 @@ var TABS=[
 {id:'auto',t:'AUTOBOOT'},
 {id:'mine',t:'MI LISTA',src:[]}];
 var ADD=['mix','sup','smart','cl','mine'];
-
 var AUTO=LS.g('hz_auto',true);
 var favs=LS.g('hz_favs',[]),cur=LS.g('hz_tab','mix'),cc=LS.g('hz_cc','cl'),cache={},OV={},EM={},data=[],view=[],pl=[],ix=-1,pix=-1,now=null,menu=false,dbg=false;
 var tt=0,tok=0,rtok=0,zt=0,qt=0,sht=0,boot=true,rec=0,ga=false,silTry=0,sil=0;
